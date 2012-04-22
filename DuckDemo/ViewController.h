@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioServices.h>
 
 @interface ViewController : UIViewController
 
@@ -15,6 +16,7 @@
 @property (nonatomic) float duckDelta;
 @property (nonatomic) float bulletDelta;
 @property (strong, nonatomic) CADisplayLink *timer;
+@property (nonatomic) SystemSoundID quackSound;
 
 -(IBAction) moveDuckAndBullet:(id) sender;
 -(IBAction) killDuck:(id) sender;

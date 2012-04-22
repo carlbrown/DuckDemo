@@ -9,8 +9,6 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-#import <AudioToolbox/AudioServices.h>
-
 @interface ViewController ()
 
 @end
@@ -21,6 +19,7 @@
 @synthesize duckDelta;
 @synthesize bulletDelta;
 @synthesize timer;
+@synthesize quackSound;
 
 -(IBAction) moveDuckAndBullet:(id) sender {
   CGRect frame=  self.duckView.frame;
@@ -54,13 +53,6 @@
   [self.timer invalidate];
   self.timer = nil;
   self.duckView.image = [UIImage imageNamed:@"dead_duck.jpg"];
-  
-  SystemSoundID quackSound;
-  AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"quack" withExtension:@"wav"], &quackSound);
-
-  AudioServicesPlaySystemSound(quackSound);
-  
-  
 }
 
 -(IBAction)startBullet:(id)sender {
@@ -87,6 +79,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
   self.duckDelta = -4.0f;
   self.bulletDelta = -10.0f;
+  AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"quack" withExtension:@"wav"], &quackSound);
+
   self.timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(moveDuckAndBullet:)];
 [self.timer addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }

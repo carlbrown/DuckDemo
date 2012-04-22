@@ -14,11 +14,21 @@
 
 @implementation ViewController
 @synthesize duckView;
+@synthesize duckDelta;
 
 -(IBAction) moveDuck:(id) sender {
   CGRect frame=  self.duckView.frame;
   
-  frame.origin.x -= 100;
+  frame.origin.x += self.duckDelta;
+  
+  if (frame.origin.x < 0) {
+    frame.origin.x = 0;
+    self.duckDelta = self.duckDelta * -1;
+  }
+  if (frame.origin.x > self.view.frame.size.width) {
+    frame.origin.x = (self.view.frame.size.width - frame.size.width);
+    self.duckDelta = self.duckDelta * -1;
+  }
   
   self.duckView.frame = frame;
 }
@@ -27,6 +37,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  self.duckDelta = -100.0f;
 }
 
 - (void)viewDidUnload

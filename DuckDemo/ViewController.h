@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *duckView;
+@property (nonatomic) float duckDelta;
 
 -(IBAction) moveDuck:(id) sender;
 

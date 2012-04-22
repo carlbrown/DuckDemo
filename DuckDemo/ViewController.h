@@ -10,4 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *duckView;
+
+-(IBAction) moveDuck:(id) sender;
+
+
 @end

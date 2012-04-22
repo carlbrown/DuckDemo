@@ -13,6 +13,15 @@
 @end
 
 @implementation ViewController
+@synthesize duckView;
+
+-(IBAction) moveDuck:(id) sender {
+  CGRect frame=  self.duckView.frame;
+  
+  frame.origin.x -= 100;
+  
+  self.duckView.frame = frame;
+}
 
 - (void)viewDidLoad
 {
@@ -22,6 +31,7 @@
 
 - (void)viewDidUnload
 {
+    [self setDuckView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

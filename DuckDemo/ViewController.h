@@ -20,5 +20,7 @@
 -(IBAction) killDuck:(id) sender;
 -(IBAction)startBullet:(id)sender;
 
+-(BOOL)isDuckHit;
+
 
 @end

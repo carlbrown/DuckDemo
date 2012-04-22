@@ -41,6 +41,10 @@
     bulletFrame.origin.y += self.bulletDelta;
     self.bulletView.frame = bulletFrame;
   }
+  
+  if ([self isDuckHit]) {
+    [self killDuck:nil];
+  }
 }
 
 -(IBAction) killDuck:(id) sender {
@@ -61,6 +65,11 @@
 
   [self.view addSubview:self.bulletView];
 }
+
+-(BOOL)isDuckHit {
+  return CGRectIntersectsRect(self.duckView.frame,self.bulletView.frame);
+}
+
 
 - (void)viewDidLoad
 {

@@ -19,6 +19,8 @@
 		D3B51CD41543AAE100102DD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B51CD31543AAE100102DD3 /* QuartzCore.framework */; };
 		D3B51CDA1543ACF300102DD3 /* dead_duck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CD91543ACF300102DD3 /* dead_duck.jpg */; };
 		D3B51CDC1543ADB500102DD3 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CDB1543ADB500102DD3 /* bullet.png */; };
+		D3B51CDE1543B50C00102DD3 /* quack.wav in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CDD1543B50C00102DD3 /* quack.wav */; };
+		D3B51CEB1543B7E600102DD3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B51CEA1543B7E600102DD3 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		D3B51CD31543AAE100102DD3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D3B51CD91543ACF300102DD3 /* dead_duck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dead_duck.jpg; sourceTree = "<group>"; };
 		D3B51CDB1543ADB500102DD3 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		D3B51CDD1543B50C00102DD3 /* quack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = quack.wav; sourceTree = "<group>"; };
+		D3B51CEA1543B7E600102DD3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B51CEB1543B7E600102DD3 /* AudioToolbox.framework in Frameworks */,
 				D3B51CD41543AAE100102DD3 /* QuartzCore.framework in Frameworks */,
 				D3B51CB51543A42300102DD3 /* UIKit.framework in Frameworks */,
 				D3B51CB71543A42300102DD3 /* Foundation.framework in Frameworks */,
@@ -59,6 +64,7 @@
 		D3B51CA51543A42300102DD3 = {
 			isa = PBXGroup;
 			children = (
+				D3B51CEA1543B7E600102DD3 /* AudioToolbox.framework */,
 				D3B51CBA1543A42300102DD3 /* DuckDemo */,
 				D3B51CB31543A42300102DD3 /* Frameworks */,
 				D3B51CB11543A42300102DD3 /* Products */,
@@ -90,6 +96,7 @@
 				D3B51CD11543A5ED00102DD3 /* duckedit.jpg */,
 				D3B51CD91543ACF300102DD3 /* dead_duck.jpg */,
 				D3B51CDB1543ADB500102DD3 /* bullet.png */,
+				D3B51CDD1543B50C00102DD3 /* quack.wav */,
 				D3B51CC31543A42300102DD3 /* AppDelegate.h */,
 				D3B51CC41543A42300102DD3 /* AppDelegate.m */,
 				D3B51CC61543A42300102DD3 /* ViewController.h */,
@@ -167,6 +174,7 @@
 				D3B51CD21543A5ED00102DD3 /* duckedit.jpg in Resources */,
 				D3B51CDA1543ACF300102DD3 /* dead_duck.jpg in Resources */,
 				D3B51CDC1543ADB500102DD3 /* bullet.png in Resources */,
+				D3B51CDE1543B50C00102DD3 /* quack.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

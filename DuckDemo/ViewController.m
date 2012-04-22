@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
+#import <AudioToolbox/AudioServices.h>
+
 @interface ViewController ()
 
 @end
@@ -51,6 +53,13 @@
   [self.timer removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
   self.timer = nil;
   self.duckView.image = [UIImage imageNamed:@"dead_duck.jpg"];
+  
+  SystemSoundID quackSound;
+  AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"quack" withExtension:@"wav"], &quackSound);
+
+  AudioServicesPlaySystemSound(quackSound);
+  
+  
 }
 
 -(IBAction)startBullet:(id)sender {

@@ -21,6 +21,7 @@
 		D3B51CDC1543ADB500102DD3 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CDB1543ADB500102DD3 /* bullet.png */; };
 		D3B51CDE1543B50C00102DD3 /* quack.wav in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CDD1543B50C00102DD3 /* quack.wav */; };
 		D3B51CEB1543B7E600102DD3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B51CEA1543B7E600102DD3 /* AudioToolbox.framework */; };
+		D3B51CFE1543CB9600102DD3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CFD1543CB9600102DD3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		D3B51CDB1543ADB500102DD3 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		D3B51CDD1543B50C00102DD3 /* quack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = quack.wav; sourceTree = "<group>"; };
 		D3B51CEA1543B7E600102DD3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D3B51CFD1543CB9600102DD3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,7 @@
 		D3B51CA51543A42300102DD3 = {
 			isa = PBXGroup;
 			children = (
-				D3B51CEA1543B7E600102DD3 /* AudioToolbox.framework */,
+				D3B51CFD1543CB9600102DD3 /* README.md */,
 				D3B51CBA1543A42300102DD3 /* DuckDemo */,
 				D3B51CB31543A42300102DD3 /* Frameworks */,
 				D3B51CB11543A42300102DD3 /* Products */,
@@ -82,6 +84,7 @@
 		D3B51CB31543A42300102DD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3B51CEA1543B7E600102DD3 /* AudioToolbox.framework */,
 				D3B51CD31543AAE100102DD3 /* QuartzCore.framework */,
 				D3B51CB41543A42300102DD3 /* UIKit.framework */,
 				D3B51CB61543A42300102DD3 /* Foundation.framework */,
@@ -175,6 +178,7 @@
 				D3B51CDA1543ACF300102DD3 /* dead_duck.jpg in Resources */,
 				D3B51CDC1543ADB500102DD3 /* bullet.png in Resources */,
 				D3B51CDE1543B50C00102DD3 /* quack.wav in Resources */,
+				D3B51CFE1543CB9600102DD3 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +303,7 @@
 				D3B51CD01543A42300102DD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

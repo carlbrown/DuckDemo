@@ -1,3 +1,4 @@
+
 Demo for [KidsCodeCamp at RailsConf 2012](https://github.com/kidscodecamp/railsconf2012/wiki)
 
 Quick game to shoot a rubber duck.  Illustrates a number of iOS programming features.
@@ -41,6 +42,9 @@ Duck Tutorial Outline Draft
     - 5.5 Hit button until duck moves back and forth
     - 5.6 Complain about button-pushing being tiring
 6. Auto-move
+    - 6.0 Setup
+        * 6.0.1 Add QuartzCore Framework
+        * 6.0.2 #import <QuartzCore/QuartzCore.h>
     - 6.1 Open View Controller
     - 6.2 Create CADisplayLink *timer property
     - 6.3 Open viewDidLoad
@@ -95,3 +99,11 @@ Duck Tutorial Outline Draft
     - 10.3 Build->Run
     - 10.4 Push Button
     - 10.5 Kill Duck
+11. Add sound on dead duck
+    - 10.1 Drag Quack.WAV into project
+    - 10.2 Include AudioToolbox Framework
+    - 10.3 #import <AudioToolbox/AudioServices.h>
+    - 10.4 Add Audio Code
+        * SystemSoundID quackSound;
+        * AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"quack" withExtension:@"wav"], &quackSound);
+        * AudioServicesPlaySystemSound(quackSound);

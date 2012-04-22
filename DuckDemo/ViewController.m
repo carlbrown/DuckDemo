@@ -51,6 +51,9 @@
 
 -(IBAction)startBullet:(id)sender {
   
+  if (self.bulletView) {
+    [self.bulletView removeFromSuperview];
+  }
   self.bulletView = [[UIImageView alloc] initWithFrame:CGRectMake(80.f, 400.0f, 20.0f, 30.0f)];
   
   

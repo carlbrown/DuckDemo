@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -15,6 +16,7 @@
 @implementation ViewController
 @synthesize duckView;
 @synthesize duckDelta;
+@synthesize timer;
 
 -(IBAction) moveDuck:(id) sender {
   CGRect frame=  self.duckView.frame;
@@ -38,6 +40,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
   self.duckDelta = -100.0f;
+  self.timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(moveDuck:)];
+[self.timer addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 - (void)viewDidUnload

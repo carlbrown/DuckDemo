@@ -16,6 +16,7 @@
 		D3B51CC81543A42300102DD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B51CC71543A42300102DD3 /* ViewController.m */; };
 		D3B51CCB1543A42300102DD3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CC91543A42300102DD3 /* ViewController.xib */; };
 		D3B51CD21543A5ED00102DD3 /* duckedit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3B51CD11543A5ED00102DD3 /* duckedit.jpg */; };
+		D3B51CD41543AAE100102DD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B51CD31543AAE100102DD3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D3B51CC71543A42300102DD3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D3B51CCA1543A42300102DD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		D3B51CD11543A5ED00102DD3 /* duckedit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = duckedit.jpg; sourceTree = "<group>"; };
+		D3B51CD31543AAE100102DD3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B51CD41543AAE100102DD3 /* QuartzCore.framework in Frameworks */,
 				D3B51CB51543A42300102DD3 /* UIKit.framework in Frameworks */,
 				D3B51CB71543A42300102DD3 /* Foundation.framework in Frameworks */,
 				D3B51CB91543A42300102DD3 /* CoreGraphics.framework in Frameworks */,
@@ -69,6 +72,7 @@
 		D3B51CB31543A42300102DD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3B51CD31543AAE100102DD3 /* QuartzCore.framework */,
 				D3B51CB41543A42300102DD3 /* UIKit.framework */,
 				D3B51CB61543A42300102DD3 /* Foundation.framework */,
 				D3B51CB81543A42300102DD3 /* CoreGraphics.framework */,

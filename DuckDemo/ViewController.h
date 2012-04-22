@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *duckView;
 @property (nonatomic) float duckDelta;
+@property (strong, nonatomic) CADisplayLink *timer;
 
 -(IBAction) moveDuck:(id) sender;
 

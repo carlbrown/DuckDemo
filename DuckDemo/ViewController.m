@@ -25,7 +25,7 @@
     frame.origin.x = 0;
     self.duckDelta = self.duckDelta * -1;
   }
-  if (frame.origin.x > self.view.frame.size.width) {
+  if ((frame.origin.x + frame.size.width) > self.view.frame.size.width) {
     frame.origin.x = (self.view.frame.size.width - frame.size.width);
     self.duckDelta = self.duckDelta * -1;
   }

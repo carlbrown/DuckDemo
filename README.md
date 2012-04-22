@@ -107,3 +107,10 @@ Duck Tutorial Outline Draft
         * SystemSoundID quackSound;
         * AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"quack" withExtension:@"wav"], &quackSound);
         * AudioServicesPlaySystemSound(quackSound);
+
+
+Graphics Files:
+Bullet from http://www.clker.com/cliparts/c/0/d/8/12344047561989671112dodom01_bullet_bill.svg.med.png 
+Live Duck from http://www.californiasailplanes.com/duckedit.jpg
+Dead Duck from http://cn1.kaboodle.com/hi/img/c/0/0/a7/5/AAAADNtx9RIAAAAAAKdYWw.jpg?v=1263776391000
+Quack.wav from http://soundjax.com/quack-1.html

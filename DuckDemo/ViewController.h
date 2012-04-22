@@ -13,9 +13,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *duckView;
 @property (strong, nonatomic) IBOutlet UIImageView *bulletView;
 @property (nonatomic) float duckDelta;
+@property (nonatomic) float bulletDelta;
 @property (strong, nonatomic) CADisplayLink *timer;
 
--(IBAction) moveDuck:(id) sender;
+-(IBAction) moveDuckAndBullet:(id) sender;
 -(IBAction) killDuck:(id) sender;
 -(IBAction)startBullet:(id)sender;
 

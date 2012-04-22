@@ -17,9 +17,10 @@
 @synthesize duckView;
 @synthesize bulletView;
 @synthesize duckDelta;
+@synthesize bulletDelta;
 @synthesize timer;
 
--(IBAction) moveDuck:(id) sender {
+-(IBAction) moveDuckAndBullet:(id) sender {
   CGRect frame=  self.duckView.frame;
   
   frame.origin.x += self.duckDelta;
@@ -34,6 +35,12 @@
   }
   
   self.duckView.frame = frame;
+  
+  if (self.bulletView) {
+    CGRect bulletFrame=  self.bulletView.frame;
+    bulletFrame.origin.y += self.bulletDelta;
+    self.bulletView.frame = bulletFrame;
+  }
 }
 
 -(IBAction) killDuck:(id) sender {
@@ -43,10 +50,12 @@
 }
 
 -(IBAction)startBullet:(id)sender {
+  
   self.bulletView = [[UIImageView alloc] initWithFrame:CGRectMake(80.f, 400.0f, 20.0f, 30.0f)];
   
   
   self.bulletView.image = [UIImage imageNamed:@"bullet.png"];
+
   [self.view addSubview:self.bulletView];
 }
 
@@ -55,7 +64,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
   self.duckDelta = -4.0f;
-  self.timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(moveDuck:)];
+  self.bulletDelta = -10.0f;
+  self.timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(moveDuckAndBullet:)];
 [self.timer addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }
 

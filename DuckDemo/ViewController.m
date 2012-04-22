@@ -35,11 +35,17 @@
   self.duckView.frame = frame;
 }
 
+-(IBAction) killDuck:(id) sender {
+  [self.timer removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+  self.timer = nil;
+  self.duckView.image = [UIImage imageNamed:@"dead_duck.jpg"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-  self.duckDelta = -100.0f;
+  self.duckDelta = -4.0f;
   self.timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(moveDuck:)];
 [self.timer addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }

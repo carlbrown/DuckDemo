@@ -15,6 +15,7 @@
 @property (strong, nonatomic) CADisplayLink *timer;
 
 -(IBAction) moveDuck:(id) sender;
+-(IBAction) killDuck:(id) sender;
 
 
 @end

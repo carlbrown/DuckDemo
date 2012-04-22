@@ -50,7 +50,8 @@
 }
 
 -(IBAction) killDuck:(id) sender {
-  [self.timer removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+  AudioServicesPlaySystemSound(quackSound);
+  [self.timer invalidate];
   self.timer = nil;
   self.duckView.image = [UIImage imageNamed:@"dead_duck.jpg"];
   

@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
+static float duckDelta = -4.0f;
+static float bulletDelta = -10.0f;
+
 @interface ViewController ()
 
 @end
@@ -16,30 +19,28 @@
 @implementation ViewController
 @synthesize duckView;
 @synthesize bulletView;
-@synthesize duckDelta;
-@synthesize bulletDelta;
 @synthesize timer;
 @synthesize quackSound;
 
 -(IBAction) moveDuckAndBullet:(id) sender {
   CGRect frame=  self.duckView.frame;
   
-  frame.origin.x += self.duckDelta;
+  frame.origin.x += duckDelta;
   
   if (frame.origin.x < 0) {
     frame.origin.x = 0;
-    self.duckDelta = self.duckDelta * -1;
+    duckDelta = duckDelta * -1;
   }
   if ((frame.origin.x + frame.size.width) > self.view.frame.size.width) {
     frame.origin.x = (self.view.frame.size.width - frame.size.width);
-    self.duckDelta = self.duckDelta * -1;
+    duckDelta = duckDelta * -1;
   }
   
   self.duckView.frame = frame;
   
   if (self.bulletView) {
     CGRect bulletFrame=  self.bulletView.frame;
-    bulletFrame.origin.y += self.bulletDelta;
+    bulletFrame.origin.y += bulletDelta;
     self.bulletView.frame = bulletFrame;
   }
   
@@ -77,8 +78,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-  self.duckDelta = -4.0f;
-  self.bulletDelta = -10.0f;
   AudioServicesCreateSystemSoundID((__bridge CFURLRef)[[NSBundle mainBundle] URLForResource:@"quack" withExtension:@"wav"], &quackSound);
 
   self.timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(moveDuckAndBullet:)];

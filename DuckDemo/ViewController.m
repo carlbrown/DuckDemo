@@ -15,6 +15,7 @@
 
 @implementation ViewController
 @synthesize duckView;
+@synthesize bulletView;
 @synthesize duckDelta;
 @synthesize timer;
 
@@ -39,6 +40,14 @@
   [self.timer removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
   self.timer = nil;
   self.duckView.image = [UIImage imageNamed:@"dead_duck.jpg"];
+}
+
+-(IBAction)startBullet:(id)sender {
+  self.bulletView = [[UIImageView alloc] initWithFrame:CGRectMake(80.f, 400.0f, 20.0f, 30.0f)];
+  
+  
+  self.bulletView.image = [UIImage imageNamed:@"bullet.png"];
+  [self.view addSubview:self.bulletView];
 }
 
 - (void)viewDidLoad

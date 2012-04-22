@@ -11,11 +11,13 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *duckView;
+@property (strong, nonatomic) IBOutlet UIImageView *bulletView;
 @property (nonatomic) float duckDelta;
 @property (strong, nonatomic) CADisplayLink *timer;
 
 -(IBAction) moveDuck:(id) sender;
 -(IBAction) killDuck:(id) sender;
+-(IBAction)startBullet:(id)sender;
 
 
 @end
